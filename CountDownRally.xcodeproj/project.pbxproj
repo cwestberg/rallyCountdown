@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A9054921C28B5BF006538E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9054911C28B5BF006538E3 /* AppDelegate.swift */; };
+		2A9054941C28B5BF006538E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9054931C28B5BF006538E3 /* ViewController.swift */; };
+		2A9054971C28B5BF006538E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9054951C28B5BF006538E3 /* Main.storyboard */; };
+		2A90549A1C28B5BF006538E3 /* CountDownRally.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A9054981C28B5BF006538E3 /* CountDownRally.xcdatamodeld */; };
+		2A90549C1C28B5BF006538E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A90549B1C28B5BF006538E3 /* Assets.xcassets */; };
+		2A90549F1C28B5BF006538E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A90549D1C28B5BF006538E3 /* LaunchScreen.storyboard */; };
+		2A9054AA1C28B5BF006538E3 /* CountDownRallyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9054A91C28B5BF006538E3 /* CountDownRallyTests.swift */; };
+		2A9054B51C28B5BF006538E3 /* CountDownRallyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9054B41C28B5BF006538E3 /* CountDownRallyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A9054A61C28B5BF006538E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A9054861C28B5BF006538E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A90548D1C28B5BF006538E3;
+			remoteInfo = CountDownRally;
+		};
+		2A9054B11C28B5BF006538E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A9054861C28B5BF006538E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A90548D1C28B5BF006538E3;
+			remoteInfo = CountDownRally;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A90548E1C28B5BF006538E3 /* CountDownRally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountDownRally.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9054911C28B5BF006538E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2A9054931C28B5BF006538E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A9054961C28B5BF006538E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A9054991C28B5BF006538E3 /* CountDownRally.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountDownRally.xcdatamodel; sourceTree = "<group>"; };
+		2A90549B1C28B5BF006538E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A90549E1C28B5BF006538E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A9054A01C28B5BF006538E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A9054A51C28B5BF006538E3 /* CountDownRallyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountDownRallyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9054A91C28B5BF006538E3 /* CountDownRallyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownRallyTests.swift; sourceTree = "<group>"; };
+		2A9054AB1C28B5BF006538E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A9054B01C28B5BF006538E3 /* CountDownRallyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountDownRallyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9054B41C28B5BF006538E3 /* CountDownRallyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownRallyUITests.swift; sourceTree = "<group>"; };
+		2A9054B61C28B5BF006538E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A90548B1C28B5BF006538E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A9054A21C28B5BF006538E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A9054AD1C28B5BF006538E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A9054851C28B5BF006538E3 = {
+			isa = PBXGroup;
+			children = (
+				2A9054901C28B5BF006538E3 /* CountDownRally */,
+				2A9054A81C28B5BF006538E3 /* CountDownRallyTests */,
+				2A9054B31C28B5BF006538E3 /* CountDownRallyUITests */,
+				2A90548F1C28B5BF006538E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A90548F1C28B5BF006538E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A90548E1C28B5BF006538E3 /* CountDownRally.app */,
+				2A9054A51C28B5BF006538E3 /* CountDownRallyTests.xctest */,
+				2A9054B01C28B5BF006538E3 /* CountDownRallyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A9054901C28B5BF006538E3 /* CountDownRally */ = {
+			isa = PBXGroup;
+			children = (
+				2A9054911C28B5BF006538E3 /* AppDelegate.swift */,
+				2A9054931C28B5BF006538E3 /* ViewController.swift */,
+				2A9054951C28B5BF006538E3 /* Main.storyboard */,
+				2A90549B1C28B5BF006538E3 /* Assets.xcassets */,
+				2A90549D1C28B5BF006538E3 /* LaunchScreen.storyboard */,
+				2A9054A01C28B5BF006538E3 /* Info.plist */,
+				2A9054981C28B5BF006538E3 /* CountDownRally.xcdatamodeld */,
+			);
+			path = CountDownRally;
+			sourceTree = "<group>";
+		};
+		2A9054A81C28B5BF006538E3 /* CountDownRallyTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A9054A91C28B5BF006538E3 /* CountDownRallyTests.swift */,
+				2A9054AB1C28B5BF006538E3 /* Info.plist */,
+			);
+			path = CountDownRallyTests;
+			sourceTree = "<group>";
+		};
+		2A9054B31C28B5BF006538E3 /* CountDownRallyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2A9054B41C28B5BF006538E3 /* CountDownRallyUITests.swift */,
+				2A9054B61C28B5BF006538E3 /* Info.plist */,
+			);
+			path = CountDownRallyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A90548D1C28B5BF006538E3 /* CountDownRally */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A9054B91C28B5BF006538E3 /* Build configuration list for PBXNativeTarget "CountDownRally" */;
+			buildPhases = (
+				2A90548A1C28B5BF006538E3 /* Sources */,
+				2A90548B1C28B5BF006538E3 /* Frameworks */,
+				2A90548C1C28B5BF006538E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountDownRally;
+			productName = CountDownRally;
+			productReference = 2A90548E1C28B5BF006538E3 /* CountDownRally.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A9054A41C28B5BF006538E3 /* CountDownRallyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A9054BC1C28B5BF006538E3 /* Build configuration list for PBXNativeTarget "CountDownRallyTests" */;
+			buildPhases = (
+				2A9054A11C28B5BF006538E3 /* Sources */,
+				2A9054A21C28B5BF006538E3 /* Frameworks */,
+				2A9054A31C28B5BF006538E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A9054A71C28B5BF006538E3 /* PBXTargetDependency */,
+			);
+			name = CountDownRallyTests;
+			productName = CountDownRallyTests;
+			productReference = 2A9054A51C28B5BF006538E3 /* CountDownRallyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2A9054AF1C28B5BF006538E3 /* CountDownRallyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A9054BF1C28B5BF006538E3 /* Build configuration list for PBXNativeTarget "CountDownRallyUITests" */;
+			buildPhases = (
+				2A9054AC1C28B5BF006538E3 /* Sources */,
+				2A9054AD1C28B5BF006538E3 /* Frameworks */,
+				2A9054AE1C28B5BF006538E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A9054B21C28B5BF006538E3 /* PBXTargetDependency */,
+			);
+			name = CountDownRallyUITests;
+			productName = CountDownRallyUITests;
+			productReference = 2A9054B01C28B5BF006538E3 /* CountDownRallyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A9054861C28B5BF006538E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Clarence Westberg";
+				TargetAttributes = {
+					2A90548D1C28B5BF006538E3 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					2A9054A41C28B5BF006538E3 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2A90548D1C28B5BF006538E3;
+					};
+					2A9054AF1C28B5BF006538E3 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2A90548D1C28B5BF006538E3;
+					};
+				};
+			};
+			buildConfigurationList = 2A9054891C28B5BF006538E3 /* Build configuration list for PBXProject "CountDownRally" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A9054851C28B5BF006538E3;
+			productRefGroup = 2A90548F1C28B5BF006538E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A90548D1C28B5BF006538E3 /* CountDownRally */,
+				2A9054A41C28B5BF006538E3 /* CountDownRallyTests */,
+				2A9054AF1C28B5BF006538E3 /* CountDownRallyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A90548C1C28B5BF006538E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A90549F1C28B5BF006538E3 /* LaunchScreen.storyboard in Resources */,
+				2A90549C1C28B5BF006538E3 /* Assets.xcassets in Resources */,
+				2A9054971C28B5BF006538E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A9054A31C28B5BF006538E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A9054AE1C28B5BF006538E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A90548A1C28B5BF006538E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A9054941C28B5BF006538E3 /* ViewController.swift in Sources */,
+				2A90549A1C28B5BF006538E3 /* CountDownRally.xcdatamodeld in Sources */,
+				2A9054921C28B5BF006538E3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A9054A11C28B5BF006538E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A9054AA1C28B5BF006538E3 /* CountDownRallyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A9054AC1C28B5BF006538E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A9054B51C28B5BF006538E3 /* CountDownRallyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A9054A71C28B5BF006538E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A90548D1C28B5BF006538E3 /* CountDownRally */;
+			targetProxy = 2A9054A61C28B5BF006538E3 /* PBXContainerItemProxy */;
+		};
+		2A9054B21C28B5BF006538E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A90548D1C28B5BF006538E3 /* CountDownRally */;
+			targetProxy = 2A9054B11C28B5BF006538E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A9054951C28B5BF006538E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A9054961C28B5BF006538E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2A90549D1C28B5BF006538E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A90549E1C28B5BF006538E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A9054B71C28B5BF006538E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A9054B81C28B5BF006538E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A9054BA1C28B5BF006538E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CountDownRally/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwestberg.rally.CountDownRally;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2A9054BB1C28B5BF006538E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CountDownRally/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwestberg.rally.CountDownRally;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2A9054BD1C28B5BF006538E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CountDownRallyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwestberg.rally.CountDownRallyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountDownRally.app/CountDownRally";
+			};
+			name = Debug;
+		};
+		2A9054BE1C28B5BF006538E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CountDownRallyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwestberg.rally.CountDownRallyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountDownRally.app/CountDownRally";
+			};
+			name = Release;
+		};
+		2A9054C01C28B5BF006538E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CountDownRallyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwestberg.rally.CountDownRallyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CountDownRally;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2A9054C11C28B5BF006538E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CountDownRallyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwestberg.rally.CountDownRallyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CountDownRally;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A9054891C28B5BF006538E3 /* Build configuration list for PBXProject "CountDownRally" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A9054B71C28B5BF006538E3 /* Debug */,
+				2A9054B81C28B5BF006538E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A9054B91C28B5BF006538E3 /* Build configuration list for PBXNativeTarget "CountDownRally" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A9054BA1C28B5BF006538E3 /* Debug */,
+				2A9054BB1C28B5BF006538E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2A9054BC1C28B5BF006538E3 /* Build configuration list for PBXNativeTarget "CountDownRallyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A9054BD1C28B5BF006538E3 /* Debug */,
+				2A9054BE1C28B5BF006538E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2A9054BF1C28B5BF006538E3 /* Build configuration list for PBXNativeTarget "CountDownRallyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A9054C01C28B5BF006538E3 /* Debug */,
+				2A9054C11C28B5BF006538E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2A9054981C28B5BF006538E3 /* CountDownRally.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2A9054991C28B5BF006538E3 /* CountDownRally.xcdatamodel */,
+			);
+			currentVersion = 2A9054991C28B5BF006538E3 /* CountDownRally.xcdatamodel */;
+			path = CountDownRally.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2A9054861C28B5BF006538E3 /* Project object */;
+}
