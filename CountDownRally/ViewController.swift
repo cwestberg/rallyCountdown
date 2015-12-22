@@ -21,12 +21,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     var delta = 0
     var currentDueTime = NSDate()
     var carNumber = 0
-    var items: [String] = []
-
+    
+    var items: [NSDate] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
         self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
             selector: "updateTimeLabel", userInfo: nil, repeats: true)
     }
@@ -35,6 +37,40 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Table
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+//        dateFormatter.timeZone = NSTimeZone(abbreviation: "-600");
+
+//        let dateInFormat = dateFormatter.stringFromDate(self.items[indexPath.row])
+        print("self.items[indexPath.row] \(self.items[indexPath.row])")
+//        print("dateInFormat++ \(dateInFormat)")
+        cell.textLabel?.text = "\(dateFormatter.stringFromDate(self.items[indexPath.row]))"
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+        //        showAlertTapped(indexPath.row)
+        
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            items.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    // End Table
 
     @IBAction func addTimeBtn(sender: AnyObject) {
         let currentDate = NSDate()
@@ -54,32 +90,36 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         //Create and an start action
         let startAction: UIAlertAction = UIAlertAction(title: "Add", style: .Default) { action -> Void in
             //Do some other stuff
-            let date = NSDate()
+            let currentDate = NSDate()
+            let calendar = NSCalendar.currentCalendar()
+            let dateComponents = calendar.components([NSCalendarUnit.Day, NSCalendarUnit.Month, NSCalendarUnit.Year, NSCalendarUnit.WeekOfYear, NSCalendarUnit.Hour, NSCalendarUnit.Minute, NSCalendarUnit.Second, NSCalendarUnit.Nanosecond], fromDate: currentDate)
+            let yy = dateComponents.year
+            let month = dateComponents.month
+            let dd = dateComponents.day
             let formatter = NSDateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ";
-            let defaultTimeZoneStr = formatter.stringFromDate(date)
-            formatter.timeZone = NSTimeZone(abbreviation: "-600");
-
-            print("defaultTimeZoneStr \(defaultTimeZoneStr)")
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+//            let defaultTimeZoneStr = formatter.stringFromDate(date)
+//            formatter.timeZone = NSTimeZone(abbreviation: "-600")
+//            print("defaultTimeZoneStr \(defaultTimeZoneStr)")
 
             let hours = actionSheetController.textFields![0]
             let minutes = actionSheetController.textFields![1]
             let units = actionSheetController.textFields![2]
             
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZ"
             let hh = (hours.text!).stringByReplacingOccurrencesOfString("HH ",withString: "")
             let mm = (minutes.text!).stringByReplacingOccurrencesOfString("MM ",withString: "")
             let uu = (units.text!).stringByReplacingOccurrencesOfString("UU ",withString: "")
             print("\(hh):\(mm):\(uu)")
 
-            let str = "2015-12-21 \(hh):\(mm):\(uu) -600"
+            let str = "\(yy)-\(month)-\(dd) \(hh):\(mm):\(uu)"
             print("str \(str)")
             self.dueTimeLbl.text = str
             
             let someDateTime = formatter.dateFromString(str)
-            print("\(someDateTime)")
+            print("someDateTime -> \(someDateTime)")
             print("HH: \(hours.text!) MM: \(minutes.text!) UU: \(units.text!)")
-            self.items.insert(str, atIndex:0)
+            self.items.append(someDateTime!)
+//            self.items.insert(someDateTime!, atIndex: 0)
             self.tableView.reloadData()
         }
         actionSheetController.addAction(startAction)
@@ -147,30 +187,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
 
     }
-    // Table
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-        cell.textLabel?.text = self.items[indexPath.row]
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
-//        showAlertTapped(indexPath.row)
-        
-    }
-    
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.Delete {
-            items.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-        }
-    }
-    // End Table
+
 }
 
