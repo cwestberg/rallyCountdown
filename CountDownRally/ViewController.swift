@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var catNumberLbl: UILabel!
     @IBOutlet weak var todLbl: UILabel!
@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     var delta = 0
     var currentDueTime = NSDate()
     var carNumber = 0
+    var items: [String] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +79,8 @@ class ViewController: UIViewController {
             let someDateTime = formatter.dateFromString(str)
             print("\(someDateTime)")
             print("HH: \(hours.text!) MM: \(minutes.text!) UU: \(units.text!)")
-
+            self.items.insert(str, atIndex:0)
+            self.tableView.reloadData()
         }
         actionSheetController.addAction(startAction)
         
@@ -144,5 +147,30 @@ class ViewController: UIViewController {
         
 
     }
+    // Table
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        cell.textLabel?.text = self.items[indexPath.row]
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+//        showAlertTapped(indexPath.row)
+        
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            items.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    // End Table
 }
 
