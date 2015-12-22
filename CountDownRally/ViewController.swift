@@ -29,7 +29,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
 
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self,
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self,
             selector: "updateTimeLabel", userInfo: nil, repeats: true)
     }
 
@@ -61,6 +61,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("You selected cell #\(indexPath.row)!")
         //        showAlertTapped(indexPath.row)
+        self.currentDueTime = self.items[indexPath.row]
+        self.dueTimeLbl.text = "\(self.items[indexPath.row])"
         
     }
     
@@ -86,6 +88,15 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             
         }
         actionSheetController.addAction(cancelAction)
+        
+        //Create and add the Delete action
+        let deleteAllAction: UIAlertAction = UIAlertAction(title: "Delete All", style: .Default) { action -> Void in
+            //Do some stuff
+            self.items = []
+            self.tableView.reloadData()
+        }
+        actionSheetController.addAction(deleteAllAction)
+
         
         //Create and an start action
         let startAction: UIAlertAction = UIAlertAction(title: "Add", style: .Default) { action -> Void in
@@ -113,7 +124,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
 
             let str = "\(yy)-\(month)-\(dd) \(hh):\(mm):\(uu)"
             print("str \(str)")
-            self.dueTimeLbl.text = str
             
             let someDateTime = formatter.dateFromString(str)
             print("someDateTime -> \(someDateTime)")
@@ -121,6 +131,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             self.items.append(someDateTime!)
 //            self.items.insert(someDateTime!, atIndex: 0)
             self.tableView.reloadData()
+//            self.dueTimeLbl.text = str
+//            self.currentDueTime = someDateTime!
         }
         actionSheetController.addAction(startAction)
         
@@ -183,7 +195,22 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         }
         
 //        current due time o current time
-        dueTimeDeltaLbl.text = "0"
+//        
+//        let elapsedTime = currentDate.timeIntervalSinceDate(self.currentDueTime)
+        let elapsedTime = self.currentDueTime.timeIntervalSinceDate(currentDate)
+        print("\(elapsedTime) = \(self.currentDueTime)  +- \(currentDate)")
+//        dueTimeDeltaLbl.text = "\(elapsedTime)"
+       let ti = Int(round(NSDate().timeIntervalSinceDate(self.currentDueTime)))
+//        let ti = NSInteger(elapsedTime)
+//        let ti = Int(elapsedTime)
+        
+//        let ms = Int((elapsedTime % 1) * 1000)
+        
+        let seconds = (ti % 60)
+        let minutes = (ti / 60) % 60
+        let hours = (ti / 3600)
+        
+        dueTimeDeltaLbl.text = NSString(format: "%0.2d:%0.2d:%0.2d",hours,minutes,seconds) as String
         
 
     }
